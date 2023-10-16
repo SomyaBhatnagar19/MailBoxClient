@@ -79,7 +79,7 @@ const LoginPage = () => {
           const token = data.idToken;
           console.log("Show token: ", token);
           localStorage.setItem("token", data.idToken);
-          
+
           //for storing email in localStorage
           const email = data.email;
           console.log("Show email: ", email);
@@ -218,7 +218,7 @@ const LoginPage = () => {
                             paddingLeft: "1rem",
                             paddingRight: "1rem",
                             border: "0.1rem solid green",
-                            boxShadow: "0 2px 5px"
+                            boxShadow: "0 2px 5px",
                           }}
                         >
                           {message.includes("successfully") ? (
@@ -246,13 +246,16 @@ const LoginPage = () => {
                         </div>
                       )}
                       <Button
-  type="submit"
-  className="m-1"
-  style={{ backgroundColor: "#4B0082", border: "none", width: "100%" }}
->
-  {isSignUp ? "Sign Up" : "Login"}
-</Button>
-
+                        type="submit"
+                        className="m-1"
+                        style={{
+                          backgroundColor: "#4B0082",
+                          border: "none",
+                          width: "100%",
+                        }}
+                      >
+                        {isSignUp ? "Sign Up" : "Login"}
+                      </Button>
 
                       {isSignUp ? null : (
                         <span style={{ color: "blue", marginTop: "0.25rem" }}>
